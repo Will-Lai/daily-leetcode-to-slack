@@ -31,7 +31,7 @@ block = [
 
 def job():
     client.chat_postMessage(
-        channel="#test-new-channel-1",
+        channel="#leetcode",
         blocks=block,
     )
 
