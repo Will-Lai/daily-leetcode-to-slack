@@ -3,14 +3,15 @@ import ssl
 import certifi
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+
+# from dotenv import load_dotenv
 
 from leetcode import previewDateAndLevel, getLink
 import schedule
 import time
 
-env_path = Path(".") / ".env"
-load_dotenv(dotenv_path=env_path)
+# env_path = Path(".") / ".env"
+# load_dotenv(dotenv_path=env_path)
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
 client = slack.WebClient(token=os.environ["SLACK_TOKEN"], ssl=ssl_context)
