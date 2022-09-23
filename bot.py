@@ -35,7 +35,7 @@ def job():
     )
 
 
-schedule.every().hour.at(":10").do(job)
+schedule.every().minute.at(":10").do(job)
 # schedule.every().day.at("00:05").do(job)
 
 t = 60 * 60 * 23
