@@ -45,8 +45,6 @@ def fetchDailyCodingChallenge(url=url, query=query):
 
 dailyQuestion = fetchDailyCodingChallenge()
 
-# def getQuestionName():
-
 
 def getLink(data=dailyQuestion):
     leetcode_url = "https://leetcode.com"
@@ -90,6 +88,10 @@ def getHints(data=dailyQuestion):
     return hints
 
 
+def getFreqBar(data=dailyQuestion):
+    return data["data"]["activeDailyCodingChallengeQuestion"]["question"]["freqBar"]
+
+
 def previewDateAndLevel():
     return getDate() + ": " + getDifficulty()
 
@@ -103,4 +105,3 @@ def previewTitle():
 # print(getDifficulty())
 # print(isPaidOnly())
 # print(getHints())
-# print(dailyQuestion)
