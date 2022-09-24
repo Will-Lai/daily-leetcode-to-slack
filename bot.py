@@ -30,19 +30,23 @@ block = [
 
 
 def job():
-    channels = ["#leetcode", "test-new-channel-1"]
-    client.chat_postMessage(
-        channel="#test-new-channel-1",
-        blocks=block,
-    )
+    channels = ["#leetcode", "#test-new-channel-1"]
+    print("running job...")
+
+    for channel in channels:
+        print("sending message to channel: " + channel)
+        client.chat_postMessage(
+            channel=channel,
+            blocks=block,
+        )
 
 
 # Leetcode update daily question at 00:00 UTC
-schedule.every().day.at("01:35").do(job)
+schedule.every().day.at("02:05").do(job)
 
 t = 60 * 60 * 23
 
 if __name__ == "__main__":
     while True:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(t)
