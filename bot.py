@@ -42,11 +42,12 @@ def job():
 
 
 # Leetcode update daily question at 00:00 UTC
-schedule.every().day.at("02:13").do(job)
+# schedule.every().day.at("02:13").do(job)
+schedule.every(5).minute.at(":00").do(job)
 
 t = 60 * 60 * 23
 
 if __name__ == "__main__":
     while True:
         schedule.run_pending()
-        time.sleep(t)
+        time.sleep(1)
