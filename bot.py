@@ -43,7 +43,7 @@ def job():
 
 # Leetcode update daily question at 00:00 UTC
 # schedule.every().day.at("02:13").do(job)
-schedule.every(5).minute.at(":00").do(job)
+schedule.every(5).minutes.at(":00").do(job)
 
 t = 60 * 60 * 23
 
