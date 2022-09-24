@@ -30,7 +30,7 @@ block = [
 
 
 def job():
-    channels = ["#test-now-channel-2", "#test-new-channel-1"]
+    channels = ["#test-new-channel-1", "#leetcode"]
     print("running job...")
 
     for channel in channels:
@@ -42,12 +42,12 @@ def job():
 
 
 # Leetcode update daily question at 00:00 UTC
-# schedule.every().day.at("02:13").do(job)
-schedule.every(5).minutes.at(":00").do(job)
+schedule.every().day.at("00:05").do(job)
+# schedule.every(5).minutes.at(":00").do(job)
 
 t = 60 * 60 * 23
 
 if __name__ == "__main__":
     while True:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(t)
