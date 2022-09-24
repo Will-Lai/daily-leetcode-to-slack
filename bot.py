@@ -30,7 +30,7 @@ block = [
 
 
 def job():
-    channels = ["#leetcode", "#test-new-channel-1"]
+    channels = ["#test-now-channel-2", "#test-new-channel-1"]
     print("running job...")
 
     for channel in channels:
