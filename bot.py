@@ -30,14 +30,15 @@ block = [
 
 
 def job():
+    channels = ["#leetcode", "test-new-channel-1"]
     client.chat_postMessage(
-        channel="#leetcode",
+        channel="#test-new-channel-1",
         blocks=block,
     )
 
 
 # Leetcode update daily question at 00:00 UTC
-schedule.every().day.at("01:15").do(job)
+schedule.every().day.at("01:28").do(job)
 
 t = 60 * 60 * 23
 
